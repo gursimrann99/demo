@@ -1,0 +1,17 @@
+<h1>Hello {{name}}</h1>
+          <h2 style.color="{{color_h2}}">"Style color property defined in class and used in view"</h2>
+          <h3 [style.color]="color_h3">{{info}}</h3>
+          <h4>Hard coded string with {{prop}}</h4>
+          <h5 [style.color]="getValue()">color defind by get value method</h5>
+          <h6 [style.color]="getValue()">color defind by get value method and returned value is {{getValue()}} </h6>
+          <input type="button" (click)="toggle()" name="name" value="{{showVal}}">
+
+          <input type="button" [disabled]="showVal" name="name" value="{{showVal}}">
+
+
+<input type="text" placeholder="any key press will print it on console" #name (keyup)="newName(name.value)"/>
+<input type="text" placeholder="enter key print it on console" #age (keyup.enter)="newName(age.value)"/>
+<input type="text" placeholder="blur (when focus moves away) it on console"#location (blur)="newName(location.value)"/>
+
+          <players>Loading Players Data</players>
+          <users>Loading Users Data</users>
